@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+}
+
+.outer-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.triangle {
+    margin: 0;
+    display: inline-block;
+    width: 15px;
+    height: 200px;
+    background-image: linear-gradient(45deg, #00d768, #92fff6 );
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+    animation: length 5s infinite;
+}
+
+.a{
+    animation-delay: -1s;
+}
+.b{
+    animation-delay: 0.1s;
+}
+.c{
+    animation-delay: -1s;
+}
+.d{
+    animation-delay: 0.4s;
+}
+.e{
+    animation-delay: -1s;
+}
+.f{
+    animation-delay: 0.2s;
+}
+
+
+@keyframes length {
+    
+    0%{
+        background-image: linear-gradient(45deg, #58ff7d, #ff5f5f );
+    }
+
+
+    50% {
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+        height: 400px;
+        background-image: linear-gradient(45deg, #ff4949, #2ec4ff );
+
+    }
+    100%{
+        background-image: linear-gradient(45deg, #f67dff, #00ffea );
+    }
+
+  
+}
